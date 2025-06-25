@@ -1,5 +1,6 @@
 # name: Terraform CI/CD
 
+
 # on:
 #   pull_request:
 #     branches:
@@ -7,6 +8,7 @@
 # #   push:
 # #     branches:
 # #       - main
+
 #   push:
 #     branches:
 #       - infra
@@ -40,6 +42,7 @@
 #       run: terraform validate
 
 #     - name: Terraform Plan
+
 #       if: github.event_name == 'pull_request' || github.event_name == 'push'
 #       run: terraform plan -no-color > plan.txt || true
 
@@ -49,7 +52,6 @@
 #       with:
 #         name: terraform-plan
 #         path: plan.txt
-
 
 #     - name: Terraform Apply
 #       if: github.event_name == 'push' && github.ref == 'refs/heads/infra'
